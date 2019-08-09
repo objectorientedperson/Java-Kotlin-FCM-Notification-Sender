@@ -1,4 +1,4 @@
-Send bulk or one message to FCM from your server. Grab the .jar on build/libs directory.
+Send bulk or one message to FCM from your server. Grab the .jar from lib directory.
 
 Usage:
 
