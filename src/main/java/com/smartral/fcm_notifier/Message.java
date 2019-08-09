@@ -21,9 +21,9 @@ public class Message {
     private String mPriority;
 
     @SerializedName("time_to_live")
-    private Long mTimeToLive = 60L;
+    private Integer mTimeToLive = 60;
 
-    public Message(Builder mBuilder) {
+    private Message(Builder mBuilder) {
         this.mTokens = mBuilder.mTokens;
         this.mData = mBuilder.mData;
         this.mPriority = mBuilder.mPriority.mValue;
@@ -45,12 +45,12 @@ public class Message {
         }
     }
 
-    class Builder {
+    public static class Builder {
 
         List<String> mTokens;
         Map<String, Object> mData = new HashMap<>();
         MessagePriority mPriority;
-        Long mTimeToLive;
+        Integer mTimeToLive;
 
         public Builder setTokens(List<String> mTokens) {
             this.mTokens = mTokens;
@@ -67,7 +67,7 @@ public class Message {
             return this;
         }
 
-        public Builder setTimeToLive(Long mTimeToLive) {
+        public Builder setTimeToLive(Integer mTimeToLive) {
             this.mTimeToLive = mTimeToLive;
             return this;
         }

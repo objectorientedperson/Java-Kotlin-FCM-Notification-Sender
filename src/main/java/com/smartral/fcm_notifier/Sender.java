@@ -41,7 +41,7 @@ public class Sender {
         }
     }
 
-    interface ResultCallback {
+    public interface ResultCallback {
         void onResult(String message);
     }
 }
